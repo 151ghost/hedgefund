@@ -25,17 +25,9 @@ export default function Navigation() {
   const [isNavigating, setIsNavigating] = useState(false)
 
   const navItems = [
-    {
-      name: "Products",
-      href: "#",
-      dropdown: [
-        { name: "Trading Signals", href: "/signals" },
-        { name: "Investment Pools", href: "/pools" },
-        
-      ],
-    },
-    { name: "Wealth", href: "/wealth" },
-    { name: "Support", href: "/support" },
+    
+    { name: "Buy a Bot", href: "/signals" },
+    { name: "Support", href: "/sup" },
   ]
 
   const handleNavigation = (href: string) => {
@@ -128,17 +120,7 @@ export default function Navigation() {
         </nav>
 
         {/* Desktop Buttons */}
-        <div className="hidden md:flex items-center space-x-4">
-          <ThemeToggle />
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Button variant="ghost" className="text-muted-foreground hover:text-foreground hover:bg-muted">
-              Login
-            </Button>
-          </motion.div>
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">Open Account</Button>
-          </motion.div>
-        </div>
+       
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center space-x-2">
